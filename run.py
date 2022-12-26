@@ -1,6 +1,6 @@
 import random #import random in order to use randomize function for words
 words = ['sandwich', 'random', 'secret', 'formulate', 'vintage', 'python', 'implicate', 'congratulate']
-
+import string #imported to verify letters against the alphabet
 def get_word(words):
     '''
     get random word from pre populated list and apply a random function on it, return 
@@ -23,5 +23,30 @@ def name_request():
         else:
             print(f"Hi {name}, time to save a life !")
             break
+def guess_letter():
+    '''
+    function to allow user to make a guess, converts any guess to uppercase and 
+    only allows alphabet entry. the majority of the below code block has been taken
+    from the youtube tutorial from Kylie Ying, link and credits will be included 
+    in readMe file
+    '''
+    word = get_word(words)
+    word_letters = set(word) #letters in the word
+    alphabet = set(string.ascii_uppercase)#checks predetermined alphabet
+    used_letters = set() #what the user has input
+    guess = input('Guess a letter:').upper()
+    if guess in alphabet - used_letters:
+        used_letters.add(guess)
+        if guess in word_letters:
+            word_letters.remove(guess)
+        
+        elif guess in used_letters:
+            print('you have already guessed this letter, try again')
+        else:
+            print('the character you have entered has not been recognized, please try again')
+   # print(f"you have guessed {guess} !")
+
+guess_letter()
 #def hangman():
 #name_request()
+#guess_letter()
