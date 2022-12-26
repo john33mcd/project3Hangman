@@ -1,5 +1,6 @@
 import random #import random in order to use randomize function for words
-words = ['sandwich', 'random', 'secret', 'formulate', 'vintage', 'python', 'implicate', 'congratulate']
+words = ['SANDWICH', 'RANDOM', 'SECRET', 'FORMULATE', 'VINTAGE', 'PYTHON', 'IMPLICATE', 'CONGRATULATE']
+print(words)
 import string #imported to verify letters against the alphabet
 def get_word(words):
     '''
@@ -38,7 +39,7 @@ def guess_letter():
         #letters that have been used
         print('letters used so far: ', ' '.join(used_letters)) #gives string of used letters
         word_list = [letter if letter in used_letters else '_' for letter in word]
-        print('Current word:', ''.join(word_list))
+        print('Current word:', ' '.join(word_list))
         
         guess = input('Guess a letter:').upper()
         if guess in alphabet - used_letters:
