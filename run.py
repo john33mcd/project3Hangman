@@ -1,6 +1,6 @@
 import random #import random in order to use randomize function for words
+#all words using uppercase to match expected input below
 words = ['SANDWICH', 'RANDOM', 'SECRET', 'FORMULATE', 'VINTAGE', 'PYTHON', 'IMPLICATE', 'CONGRATULATE']
-print(words)
 import string #imported to verify letters against the alphabet
 def get_word(words):
     '''
