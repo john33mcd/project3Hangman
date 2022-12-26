@@ -1,6 +1,9 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-def function():
-    print("tester")
-function()
+import random #import random in order to use randomize function for words
+words = ['sandwich', 'random', 'secret', 'formulate', 'vintage', 'python', 'implicate', 'congratulate']
+random.shuffle(words)
+print(words)
+def nameRequest():
+    name = input("Hi, please enter your name:")
+    print(f"Hi {name}, time to save a life !")
+#def hangman():
+nameRequest()
