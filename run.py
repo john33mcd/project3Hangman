@@ -34,19 +34,27 @@ def guess_letter():
     word_letters = set(word) #letters in the word
     alphabet = set(string.ascii_uppercase)#checks predetermined alphabet
     used_letters = set() #what the user has input
-    guess = input('Guess a letter:').upper()
-    if guess in alphabet - used_letters:
-        used_letters.add(guess)
-        if guess in word_letters:
-            word_letters.remove(guess)
+    while len(word_letters) > 0: #while there is still letters to be filled
+        #letters that have been used
+        print('letters used so far: ', ' '.join(used_letters)) #gives string of used letters
+        word_list = [letter if letter in used_letters else '_' for letter in word]
+        print('Current word:', ''.join(word_list))
         
+        guess = input('Guess a letter:').upper()
+        if guess in alphabet - used_letters:
+            used_letters.add(guess)
+            if guess in word_letters:
+                word_letters.remove(guess)
+            
         elif guess in used_letters:
             print('you have already guessed this letter, try again')
         else:
             print('the character you have entered has not been recognized, please try again')
-   # print(f"you have guessed {guess} !")
+    # print(f"you have guessed {guess} !")
 
-guess_letter()
-#def hangman():
-#name_request()
-#guess_letter()
+
+def hangman():
+    get_word(words)
+    name_request()
+    guess_letter()
+hangman()
