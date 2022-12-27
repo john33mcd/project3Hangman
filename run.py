@@ -73,9 +73,23 @@ def guess_letter():
     else:
         time.sleep(2)
         print(f'congratulations, you won, thank you for playing \n you successfully guessed {word}')
+#functionality to allow the user to try again, code block from python-forum.io utilised, will be linked in readMe
+def playAgain():
+    while True:
+        print('press 1 if you would like to play again')
+        print('press Q if you would like to quit')
+        choice = input('Enter your choice: ').lower()
+        if choice == '1':
+            hangman()
+        elif choice == 'q':
+            return False
+        else:
+            print('you have not picked a viable choice, please try again')
+
 #compiles and runs all functions
 def hangman():
     get_word(words)
     name_request()
     guess_letter()
 hangman()
+playAgain()
