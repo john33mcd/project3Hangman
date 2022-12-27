@@ -1,8 +1,8 @@
 import random #import random in order to use randomize function for words
 #all words using uppercase to match expected input below
-words = ['SANDWICH', 'RANDOM', 'SECRET', 'FORMULATE', 'VINTAGE', 'PYTHON', 'IMPLICATE', 'CONGRATULATE']
 import string #imported to verify letters against the alphabet
-lives = 5
+words = ['SANDWICH', 'RANDOM', 'SECRET', 'FORMULATE', 'VINTAGE', 'PYTHON', 'IMPLICATE', 'CONGRATULATE']
+print("Hi, welcome to hangman !")
 def get_word(words):
     '''
     get random word from pre populated list and apply a random function on it, return 
@@ -18,12 +18,12 @@ def name_request():
     '''
     name = ''
     while True:
-        name = input("Hi, please enter your name:")
+        name = input("Please enter your name:")
         if not name.isalpha():
             print("please enter a name with letters only!")
             continue
         else:
-            print(f"Hi {name}, time to save a life !")
+            print(f"{name}! It's time to save a life !")
             break
 def guess_letter():
     '''
@@ -62,10 +62,10 @@ def guess_letter():
             print('the character you have entered has not been recognized, please try again')
     
     if lives == 0:
-        print(f'oh no, you have ran out of lives, better luck next time !\n the word was {word}')
+        print(f'Hard luck, you have ran out of lives, better luck next time !\n the word was {word}')
     else:
         print(f'congratulations, you won, thank you for playing \n you successfully guessed {word}')
-
+#compiles and runs all functions
 def hangman():
     get_word(words)
     name_request()
