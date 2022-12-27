@@ -1,8 +1,14 @@
 import random #import random in order to use randomize function for words
+import time #import to add time function to introduction
 #all words using uppercase to match expected input below
 import string #imported to verify letters against the alphabet
 words = ['SANDWICH', 'RANDOM', 'SECRET', 'FORMULATE', 'VINTAGE', 'PYTHON', 'IMPLICATE', 'CONGRATULATE']
-print("Hi, welcome to hangman !")
+print("Hi, welcome to hangman!")
+time.sleep(2)
+print("you must try and guess the random word")
+time.sleep(2)
+print("you only have 7 lives so be careful!!\n")
+time.sleep(2)
 def get_word(words):
     '''
     get random word from pre populated list and apply a random function on it, return 
@@ -23,7 +29,7 @@ def name_request():
             print("please enter a name with letters only!")
             continue
         else:
-            print(f"{name}! It's time to save a life !")
+            print(f"\n{name}! It's time to save a life!\n")
             break
 def guess_letter():
     '''
@@ -40,8 +46,8 @@ def guess_letter():
     lives = 7
     while len(word_letters) > 0 and lives > 0: #while there is still letters to be filled
         #letters that have been used
-        print('letters used so far: ', ' '.join(used_letters)) #gives string of used letters
-        print(f'you have {lives} lives left')
+        print(f'you have {lives} lives left\n')
+        print('letters used so far: \n', ' '.join(used_letters)) #gives string of used letters
         word_list = [letter if letter in used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
         
@@ -54,7 +60,7 @@ def guess_letter():
 
             else:
                 lives = lives - 1
-                print(f"hard luck, you have lost a life, only {lives} left")
+                print(f"\nhard luck, you have lost a life, {lives} left")
             
         elif guess in used_letters:
             print('you have already guessed this letter, try again')
@@ -62,8 +68,10 @@ def guess_letter():
             print('the character you have entered has not been recognized, please try again')
     
     if lives == 0:
-        print(f'Hard luck, you have ran out of lives, better luck next time !\n the word was {word}')
+        time.sleep(2)
+        print(f'Hard luck, you have ran out of lives, better luck next time !\n\nThe word was {word}')
     else:
+        time.sleep(2)
         print(f'congratulations, you won, thank you for playing \n you successfully guessed {word}')
 #compiles and runs all functions
 def hangman():
