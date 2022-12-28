@@ -46,7 +46,6 @@ def guess_letter():
     lives = 7
     while len(word_letters) > 0 and lives > 0: #while there is still letters to be filled
         #letters that have been used
-        print(f'you have {lives} lives left\n')
         print('letters used so far: \n', ' '.join(used_letters)) #gives string of used letters
         word_list = [letter if letter in used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
@@ -60,7 +59,7 @@ def guess_letter():
 
             else:
                 lives = lives - 1
-                print(f"\nhard luck, you have lost a life, {lives} left")
+                print(f"\nhard luck, you have lost a life, {lives} lives left")
             
         elif guess in used_letters:
             print('you have already guessed this letter, try again')
