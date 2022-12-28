@@ -97,10 +97,47 @@ returned python is valid
 - implemented various tests, put in special characters and made
 sure that these were not accepted, input more than one character at a time and input numbers to assure validation in place
 
+- Ran code through Code Institute Python Linter and rectified
+all errors, no outstanding issues - [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+
 ## Bugs
 
 - No bugs remain at this time
 
 ## Validator
 
-- No errors identified from syntax check online [infoheap](https://infoheap.com/python-lint-online/) or on 
+- No errors identified from syntax check online [infoheap](https://infoheap.com/python-lint-online/)
+
+- Ran code through Code Institute Python Linter and rectified
+all errors, no outstanding issues - [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+
+## Deployment
+
+This project was deployed using Code Institute's mock terminal
+for Heroku
+
+- Steps for Deployment:
+    - forked sample [repository](https://github.com/Code-Institute-Org/python-essentials-template)
+    - Created the app on Heroku
+    - Set the buildbacks to Python and NodeJS in that order
+    - connected repository on Github to Heroku application
+    - Deployed the application
+
+## Credits and References
+
+- Code Institute for the deployment fork/terminal
+- Wikipedia for more info on hangman game origin
+- Kylie Ying youtube tutorial, [How to Code a Game
+of Hangman](https://www.youtube.com/watch?v=cJJTnI22IF8), utilised code blocks from this tutorial in my project
+- Used code from [bobbyhadz.com](https://bobbyhadz.com/blog/python-input-only-letters-allowed) for validation of letter
+only input
+- Utilised [Freecodecamp](https://www.freecodecamp.org/news/python-string-format-python-s-print-format-example/)
+ to implement f strings correctly
+- referenced [W3Schools](https://www.w3schools.com/python/ref_random_shuffle.asp) to implement shuffle functionality
+- Made wireframe using [canva](https://www.canva.com/)
+- implemented code from [linuxhint](https://linuxhint.com/python-increment-by-1/#:~:text=Let's%20have%20a%20look%20at,value%20should%20be%201%20now.) in order to implement
+lives functionality
+- implemented delay and time functions learned from [pythonforbeginners.com](https://www.pythonforbeginners.com/code-snippets-source-code/game-hangman)
+- implemented play again function learned from [python-forum.io](https://python-forum.io/thread-32088.html)
