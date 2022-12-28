@@ -5,9 +5,9 @@ import string #imported to verify letters against the alphabet
 words = ['SANDWICH', 'RANDOM', 'SECRET', 'FORMULATE', 'VINTAGE', 'PYTHON', 'IMPLICATE', 'CONGRATULATE']
 print("Hi, welcome to hangman!")
 time.sleep(2)
-print("you must try and guess the random word")
+print("You must try and guess the random word")
 time.sleep(2)
-print("you only have 7 lives so be careful!!\n")
+print("You only have 7 lives so be careful!!\n")
 time.sleep(2)
 def get_word(words):
     '''
@@ -24,7 +24,7 @@ def name_request():
     '''
     name = ''
     while True:
-        name = input("Please enter your name:")
+        name = input("Please enter your name:\n")
         if not name.isalpha():
             print("please enter a name with letters only!")
             continue
@@ -51,7 +51,7 @@ def guess_letter():
         word_list = [letter if letter in used_letters else '_' for letter in word]
         print('Current word:', ' '.join(word_list))
         
-        guess = input('Guess a letter:').upper()
+        guess = input('Guess a letter:\n').upper()
         if guess in alphabet - used_letters:
             used_letters.add(guess)
             if guess in word_letters:
@@ -78,7 +78,7 @@ def playAgain():
     while True:
         print('press 1 if you would like to play again')
         print('press Q if you would like to quit')
-        choice = input('Enter your choice: ').lower()
+        choice = input('Enter your choice:\n').lower()
         if choice == '1':
             hangman()
         elif choice == 'q':
