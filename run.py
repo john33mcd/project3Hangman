@@ -9,6 +9,8 @@ print("You must try and guess the random word")
 time.sleep(2)
 print("You only have 7 lives so be careful!!\n")
 time.sleep(2)
+
+
 def get_word(words):
     '''
     get random word from pre populated list and apply a random function on it, return 
@@ -16,6 +18,7 @@ def get_word(words):
     '''
     word = random.choice(words)
     return word
+
 
 def name_request():
     '''
@@ -31,6 +34,8 @@ def name_request():
         else:
             print(f"\n{name}! It's time to save a life!\n")
             break
+
+
 def guess_letter():
     '''
     function to allow user to make a guess, converts any guess to uppercase and 
@@ -73,6 +78,8 @@ def guess_letter():
         time.sleep(2)
         print(f'congratulations, you won, thank you for playing \n you successfully guessed {word}')
 #functionality to allow the user to try again, code block from python-forum.io utilised, will be linked in readMe
+
+
 def playAgain():
     while True:
         print('press 1 if you would like to play again')
@@ -84,6 +91,7 @@ def playAgain():
             return False
         else:
             print('you have not picked a viable choice, please try again')
+
 
 #compiles and runs all functions
 def hangman():

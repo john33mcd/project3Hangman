@@ -87,3 +87,20 @@ option to start again or quit the game.
 
 <img src="assets/images/noLivesLeft.jpg">
 
+## Testing
+
+- Passed the code through Python Lint (Syntax check) online -[infoheap](https://infoheap.com/python-lint-online/), this 
+returned python is valid
+
+- Tested the program on Heroku terminal
+
+- implemented various tests, put in special characters and made
+sure that these were not accepted, input more than one character at a time and input numbers to assure validation in place
+
+## Bugs
+
+- No bugs remain at this time
+
+## Validator
+
+- No errors identified from syntax check online [infoheap](https://infoheap.com/python-lint-online/) or on 
