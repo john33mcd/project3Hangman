@@ -1,31 +1,89 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman!
 
-Welcome john33mcd,
+Hangman is a re-imagined take on the classic guessing game where an individual attempts
+to figure out a word using a limited number of guesses.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+More information regarding the origin and convential method of playing can be found on wikipedia -
 
-## Reminders
+[Hangman](https://en.wikipedia.org/wiki/Hangman_(game))
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+The game has been designed as a deliverable for the third project in the Code Institutes Diploma
+in Full Stack Software Development.
 
-## Creating the Heroku app
+Technologies used - Python.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+Link to live website as followed -
 
-1. `heroku/python`
-2. `heroku/nodejs`
+[Hangman game](http://hangmanproject3.herokuapp.com/)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+place AMI RESPONSIVE HERE.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
+## How to Play
 
-## Constraints
+In this version of hangman, a random word is selected from a pre populated
+list then the user is asked for their name.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+The user is warned that they have 7 lives and must guess carefully.
 
------
-Happy coding!
+The user can see how many letters are in the word that they must guess.
+
+If the user makes a correct guess, the letter will fill into its slot and
+the game will continue, if the user makes a wrong guess, a life will be subtracted
+and the game will continue.
+
+The game will continue until the user figures out the word or runs out of lives.
+
+You win the game if you solve the word before running out of lives.
+
+## Features
+
+### Introduction screen
+
+The initial page is a brief welcome and explanation as to what the user is expected to do,
+followed by a request for the user's name.
+
+<img src="assets/images/introScreen.jpg">
+
+### Initial Guess
+
+Once the user inputs their name, the game will respond and tell them its time to start. The
+user will be presented with a blank word with a certain number of characters and their first
+guess is requested.
+
+<img src="assets/images/usernameResponse.jpg">
+
+### Correct Choice
+
+If the user makes a correct guess, the letter will populate in the relevant position and the
+user is congratulated and prompted to make their next guess.
+
+<img src="assets/images/correctChoice.jpg">
+
+### Wrong Choice
+
+If the user makes an incorrect guess, they will lose a life and be prompted to make their next guess.
+
+<img src="assets/images/wrongChoice.jpg">
+
+### Duplicate Guess
+
+If the user inputs a character they have already guessed they will be told that this has already been
+guessed and to have another guess.
+
+<img src="assets/images/guessedAlready.jpg">
+
+### Winner
+
+If the user manages to successfully guess all the letters in the word, they will be congratulated, thanked for playing
+and asked if they would like to exit or play again.
+
+<img src="assets/images/guessedTheWord.jpg">
+
+### Loser
+
+If the user runs out of lives, the word they were trying to guess will be populated and they will be prompted with an
+option to start again or quit the game. 
+
+<img src="assets/images/noLivesLeft.jpg">
+
