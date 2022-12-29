@@ -12,11 +12,7 @@ in Full Stack Software Development.
 
 Technologies used - Python.
 
-Link to live website as followed -
-
-[Hangman game](http://hangmanproject3.herokuapp.com/)
-
-place AMI RESPONSIVE HERE.
+The live program can be reached [HERE](http://hangmanproject3.herokuapp.com/)
 
 
 ## How to Play
@@ -35,6 +31,13 @@ and the game will continue.
 The game will continue until the user figures out the word or runs out of lives.
 
 You win the game if you solve the word before running out of lives.
+
+## Initial Planning
+
+A wireframe was devised to provide a model to work towards as
+this project was developed -
+
+<img src="assets/images/wireframe.jpg">
 
 ## Features
 
@@ -100,6 +103,12 @@ sure that these were not accepted, input more than one character at a time and i
 - Ran code through Code Institute Python Linter and rectified
 all errors, no outstanding issues - [CI Python Linter](https://pep8ci.herokuapp.com/)
 
+## Future Expansion
+
+- Import a larger array/set of words to shuffle through to present a less predictable challenge
+- design command line art to show the various stages of the game as you progress
+- difficulty levels that create variables such as less lives and larger words
+
 
 ## Bugs
 
@@ -119,7 +128,7 @@ This project was deployed using Code Institute's mock terminal
 for Heroku
 
 - Steps for Deployment:
-    - forked sample [repository](https://github.com/Code-Institute-Org/python-essentials-template)
+    - forked sample Code Institute [repository](https://github.com/Code-Institute-Org/python-essentials-template)
     - Created the app on Heroku
     - Set the buildbacks to Python and NodeJS in that order
     - connected repository on Github to Heroku application
