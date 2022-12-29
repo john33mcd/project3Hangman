@@ -3,7 +3,7 @@
 Hangman is a re-imagined take on the classic guessing game where an individual attempts
 to figure out a word using a limited number of guesses.
 
-More information regarding the origin and convential method of playing can be found on wikipedia -
+More information regarding the origin and conventional method of playing can be found on wikipedia -
 
 [Hangman](https://en.wikipedia.org/wiki/Hangman_(game))
 
