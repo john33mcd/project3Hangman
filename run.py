@@ -90,7 +90,11 @@ def guess_letter():
 # code block from python-forum.io utilised, will be linked in readMe
 
 
-def playAgain():
+def play_again():
+    '''
+    This function allows the user to quit out or to
+    restart the game from the name input section
+    '''
     while True:
         print('press 1 if you would like to play again')
         print('press Q if you would like to quit')
@@ -103,12 +107,14 @@ def playAgain():
             print('you have not picked a viable choice, please try again')
 
 
-# compiles and runs all functions
 def hangman():
+    '''
+    compiles and runs all functions
+    '''
     get_word(words)
     name_request()
     guess_letter()
 
 
 hangman()
-playAgain()
+play_again()
